@@ -6,7 +6,7 @@ import App from './components/App';
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <Component name={"Surekha Akula"}/>
+      <Component name={"Krishna"}/>
     </AppContainer>,
     document.getElementById('root'),
   )
