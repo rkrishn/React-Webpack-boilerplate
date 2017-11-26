@@ -3,19 +3,17 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader'
 import App from './components/App';
 
-ReactDOM.render(
-  <AppContainer>
-  <App name={"bujjii Akula"}/>
-  </AppContainer>,
-  document.getElementById('root')
-);
+const render = Component => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component name={"Surekha Akula"}/>
+    </AppContainer>,
+    document.getElementById('root'),
+  )
+}
 
+render(App)
 // Webpack Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./components/App', () => { render(
-    <AppContainer>
-    <App name={"bujji Akula"}/>
-    </AppContainer>,
-    document.getElementById('root')
-  ) })
+  module.hot.accept()
 }

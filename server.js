@@ -12,9 +12,8 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require("webpack-hot-middleware")(compiler, {
   log: false,
-  path: "/__what",
-  reload:true,
-  heartbeat: 2000
+  path: "/__webpack_hmr",
+  heartbeat: 20000
 }));
 
 app.get('*', function(req, res) {
