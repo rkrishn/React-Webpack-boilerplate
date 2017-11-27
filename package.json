@@ -1,7 +1,7 @@
 {
   "name": "webpack-es6-react-boilerplate",
   "version": "1.0.0",
-  "description": "A small demo project that shows how to use webpack for client-side development in ECMAScript 6.",
+  "description": "Boiler plate for REACT, ES6, Webpack Serves the index.html from Server",
   "scripts": {
     "start": "node server.js"
   },
