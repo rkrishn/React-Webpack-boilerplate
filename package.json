@@ -4,7 +4,8 @@
   "description": "Boiler plate for REACT, ES6, Webpack Serves the index.html from Server",
   "scripts": {
     "start": "node server.js",
-    "dev": "webpack --config webpack.config.dev.js --watch"
+    "dev": "webpack --config webpack.config.dev.js --watch",
+    "build": "webpack --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
