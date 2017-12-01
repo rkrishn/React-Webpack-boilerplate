@@ -8,7 +8,7 @@ import styl from './styles/style.styl';
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <Component name={"Krishna"}/>
+      <Component name={"Krishnaaaa"}/>
     </AppContainer>,
     document.getElementById('root'),
   )
