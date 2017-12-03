@@ -7,15 +7,15 @@ const extractStyleToCSS = new ExtractTextPlugin('css/stylus.css');
 
 module.exports = {
     entry: [
-        'react-hot-loader/patch',
-        'webpack-hot-middleware/client',
+        //'react-hot-loader/patch',
+        //'webpack-hot-middleware/client',
         './src/main.js',
         './src/styles/style.styl'
     ],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/static/'
+        publicPath: '/'
     },
     module: {
         loaders: [
@@ -41,7 +41,7 @@ module.exports = {
     ]
 },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
+        //new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         extractStyleToCSS
         //extractCSS

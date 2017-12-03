@@ -6,9 +6,10 @@ class App extends React.Component {
     super(props);
     //alert('constructor')
     this.state={
-      helloText:"Helllo"
+      helloText:"Hello",
+      colorVal:"ff0000",
+      inputVal:'Hello'
     };
-    this.cclick = this.cclick.bind(this);
   }
   //  componentWillReceiveProps(nextProps, nextState){
   //   alert('componentWillReceiveProps');
@@ -29,15 +30,29 @@ class App extends React.Component {
     //alert('shouldComponentUpdate');
  // }
 
-  cclick=()=>{
+ onChange=(e)=>{
     this.setState({
-      helloText:"bujji"
+      inputVal:e.target.value,
+      helloText:e.target.value
+    });
+  }
+
+  onColorChange=(e)=>{
+    document.querySelectorAll("body")[0].style.backgroundColor = e.target.value;
+    this.setState({
+      colorVal:e.target.value
     });
   }
 
   render() {
     //alert('App render')
-      return <h1 onClick={this.cclick}>{this.state.helloText}, {this.props.name}</h1>;
+      return (
+        <div>
+          <input type='text' value={this.state.inputVal} onChange={this.onChange} placeholder={this.state.helloText} />
+          <h1>{this.state.helloText}, {this.props.data.text}</h1>
+          <input type='color' onChange={this.onColorChange} value={this.state.colorVal}/>
+        </div>
+      );
     }
   }
 
