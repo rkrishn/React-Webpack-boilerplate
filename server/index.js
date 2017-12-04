@@ -13,7 +13,12 @@ import http from 'http'
 import reload from 'reload'
 const app = express();
 
-
+/* START HACK */
+console.log(process.env.BROWSER);
+if (!process.env.BROWSER) {
+  global.window=''; // Temporarily define window for server-side
+}
+/* END HACK */
 
 //var compiler = webpack(config);
 app.use('/static', express.static(path.join(__dirname + '/../dist')));

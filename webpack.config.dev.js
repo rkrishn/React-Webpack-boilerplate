@@ -43,7 +43,10 @@ module.exports = {
     plugins: [
         //new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        extractStyleToCSS
+        extractStyleToCSS,
+        new webpack.DefinePlugin({
+            'process.env.BROWSER': JSON.stringify(true)
+          }),
         //extractCSS
         
     ],
