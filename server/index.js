@@ -14,7 +14,6 @@ import reload from 'reload'
 const app = express();
 
 /* START HACK */
-console.log(process.env.BROWSER);
 if (!process.env.BROWSER) {
   global.window=''; // Temporarily define window for server-side
 }
