@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Boiler plate for REACT, ES6, Webpack Serves the index.html from Server",
   "scripts": {
-    "start": "nodemon --exec babel-node server",
+    "build:code": "webpack --config webpack.config.dev.js --watch",
+    "nodemon:watch": "nodemon --exec babel-node server",
+    "start": "npm-run-all --parallel build:code nodemon:watch",
     "dev": "webpack --config webpack.config.dev.js --watch",
     "build": "webpack --config webpack.config.prod.js"
   },
